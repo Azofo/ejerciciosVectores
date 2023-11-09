@@ -88,8 +88,8 @@ void rotar_izq_vector(int vector[],int tam){
 	int i,aux,aux2;
 	aux = vector[0];
 	for(i=1;i<tam;i++){
-		aux2==vector[i];
-		vector[i-1]=aux2;
+
+		vector[i-1]=vector[i];
 
 		}
 	vector[tam-1]=aux;
@@ -101,10 +101,11 @@ void rotar_der_vector(int vector[],int tam){
 
 	aux = vector[tam-1];
 
-	for(i=0;i<tam-2;i--){
-			aux2=vector[i];
-			vector[i+1]=aux2;
+	for(i=tam-2;i>=0;i--){
+
+			vector[i+1]=vector[i];
 
 		}
 	vector[0]=aux;
 }
+
